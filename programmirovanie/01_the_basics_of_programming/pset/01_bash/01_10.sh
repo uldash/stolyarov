@@ -6,12 +6,11 @@ if [ $# -ne 2 ]; then
 fi
 
 STR="$1"
-COUNTER=0
-MAX=$(( $2 - 1 ))
+COUNTER=1
 
-while [ $COUNTER -lt $MAX ]; do
-    COUNTER=$(( COUNTER + 1 ))
+while [ $COUNTER -lt $2 ]; do
     STR="$STR $(( $1 + $COUNTER))" 
+    COUNTER=$(( COUNTER + 1 ))
 done
 
-echo $STR
+echo "$STR"
