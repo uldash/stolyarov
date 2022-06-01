@@ -1,7 +1,7 @@
 program Diamond;
 
 const
-    CHARS = ' ';
+    CHARS = '-';
 
 procedure PrintChars(ch: char; count: integer);
 var
@@ -23,15 +23,22 @@ begin
     writeln;
 end;
 
+function NegotiateSize: integer; // функция с побочными эффектаи (вывод на экран)
 var
-    n, k, h: word;
+    h: integer;
 begin
     repeat
         write('Enter the diamond''s height (positive odd): ');
         readln(h);
     until (h > 0) and (h mod 2 = 1);
+    NegotiateSize := h;
+end;
 
-    n := h div 2;
+var
+    n, k: word;
+
+begin
+    n := NegotiateSize div 2;
 
     for k := 1 to n + 1 do
         PrintLineOfDiamond(k, n);

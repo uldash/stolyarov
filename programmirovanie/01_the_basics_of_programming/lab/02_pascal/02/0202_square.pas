@@ -1,6 +1,6 @@
 program square;
 var
-    x: qword;
+    x: Integer;
 begin
     read(x);
     x := x * x;

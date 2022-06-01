@@ -6,7 +6,7 @@ var
     i: word;
 begin
     for i := 1 to COUNT do
-        writeln(i, ' ',MESSAGE);
+        writeln(i:2, #9, MESSAGE);
 
     {COUNT := 21; Error: Variable identifier expected}
 

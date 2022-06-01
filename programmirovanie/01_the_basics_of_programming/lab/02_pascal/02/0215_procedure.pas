@@ -1,4 +1,5 @@
 program HelloProc;
+
 const
     MESSAGE = 'Hello World!';
 

@@ -1,4 +1,5 @@
 program IOR;
+
 var
     x, y: longint;
 begin

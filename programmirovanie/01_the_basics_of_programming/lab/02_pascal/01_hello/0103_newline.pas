@@ -1,4 +1,4 @@
-program NewLineDemo;
+program newline;
 begin
     write('First');
     writeln('Second');

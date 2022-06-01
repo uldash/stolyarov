@@ -1,4 +1,4 @@
-program fibonacci_exit;
+program Fibonacci;
 
 function Fibonacci(n: integer): qword;
 var
@@ -6,22 +6,24 @@ var
     p,q,r: qword;
 begin
     if n <= 0 then
-        begin
-        Fibonacci := 0;
-        exit;
-        end;    
-    q := 0;
-    r := 1;
-    for i := 2 to n do
+        Fibonacci := 0
+    else
     begin
-        p := q;
-        q := r;
-        r := p + q;        
+        q := 0;
+        r := 1;
+        for i := 2 to n do
+        begin
+            p := q;
+            q := r;
+            r := p + q;        
+        end;
+        Fibonacci := r;
     end;
-    Fibonacci := r;
 end;
+
 var
     num: integer;
+
 begin
     write('Input number: ');
     readln(num);
