@@ -3,7 +3,7 @@ var
     iterator: integer; 
 begin
     iterator := 0;
-    while iterator < 20 do
+    while iterator < 20 do 
     begin
         writeln(iterator, ' Hello, World!');
         iterator += 1;
